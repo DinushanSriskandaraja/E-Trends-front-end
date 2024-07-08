@@ -1,0 +1,11 @@
+/* src/components/ProductList/ProductList.css */
+
+.product-list {
+  padding: 2em;
+}
+
+.product-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1em;
+}

@@ -1,0 +1,60 @@
+/* Search.css */
+
+.search {
+  display: flex;
+  flex-direction: row;
+  /* align-items: center; */
+  max-width: 750px;
+  /* Adjust max-width as needed */
+  margin: 0 auto;
+  /* Center align horizontally */
+  background-color: var(--primary-background-color);
+  border-color: var(--secondary-color1);
+  border: solid 2px;
+  /* Background color for search bar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  /* Box shadow for a subtle effect */
+  border-radius: 50px;
+  /* Rounded corners */
+}
+
+.search-input {
+  margin: auto;
+  /* height: 25px; */
+  /* flex: 1; */
+  /* padding: 10px; */
+  background-color: var(--primary-background-color);
+  font-size: 16px;
+  border: none;
+  outline: none;
+  border-radius: 24px;
+  /* Match outer container's border-radius */
+}
+
+.search-button {
+  padding: 10px 20px;
+  font-size: 16px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: var(--primary-background-color);
+  background-color: var(--primary-text-color);
+  /* Button background color */
+  border-radius: 24px;
+  /* Rounded corners */
+}
+
+/* .search-button:hover { */
+
+/* background-color: var(--primary-background-color); */
+
+/* Hover background color */
+
+/* cursor: pointer; */
+
+/* }  */
+
+.search-icon {
+  margin-right: 8px;
+  /* Space between icon and text */
+}

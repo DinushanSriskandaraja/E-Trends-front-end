@@ -1,0 +1,21 @@
+/* src/components/Signup/Signup.css */
+
+.page {
+  padding: 2em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+input {
+  margin-bottom: 1em;
+  padding: 0.5em;
+}
+
+button {
+  padding: 0.5em;
+}

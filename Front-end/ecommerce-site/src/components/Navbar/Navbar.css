@@ -1,0 +1,78 @@
+.navbar {
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5em 1em;
+  font-family: "Poppins", sans-serif;
+  /* Use Poppins font */
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  width: 40px;
+  /* Adjust size as needed */
+  height: 40px;
+  /* Adjust size as needed */
+  margin-right: 1em;
+}
+
+.donation-btn {
+  color: var(--primary-text-color);
+  /* Black text */
+  text-decoration: none;
+  border: 2px solid var(--primary-text-color);
+  /* Black border */
+  padding: 0.5em 1em;
+  border-radius: 50px;
+  /* Rounded corners */
+  font-family: "Poppins", sans-serif;
+  /* Use Poppins font */
+  font-weight: 600;
+  /* SemiBold */
+  margin-left: auto;
+  /* Move donation button to the right */
+}
+
+.navbar-center {
+  flex: 1;
+  /* Takes up remaining space */
+  display: flex;
+  justify-content: center;
+}
+
+.nav-link {
+  color: var(--primary-text-color);
+  /* Black text */
+  text-decoration: none;
+  margin: 0 1em;
+}
+
+.nav-link:hover {
+  text-decoration: underline;
+}
+
+.donation-btn:hover {
+  background-color: var(--primary-text-color);
+  /* Black background on hover */
+  text-decoration: none;
+  color: var(--primary-background-color);
+  /* White text on hover */
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.user-icon {
+  color: var(--primary-text-color);
+  /* Black icon */
+  font-size: 1.5em;
+  text-decoration: none;
+}

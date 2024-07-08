@@ -1,0 +1,14 @@
+/* src/components/DonationPage/DonationPage.css */
+
+.page {
+  padding: 2em;
+}
+
+input {
+  margin-right: 1em;
+  padding: 0.5em;
+}
+
+button {
+  padding: 0.5em;
+}
