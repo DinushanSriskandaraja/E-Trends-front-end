@@ -1,9 +1,7 @@
 import React, { useState } from "react";
-import { useAuth } from "../../Context/AuthContext"; // Adjust path as per your file structure
 import "./Login.css";
 
 const Login = () => {
-  const { login } = useAuth();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState(null);
@@ -11,11 +9,12 @@ const Login = () => {
   const handleSubmit = (event) => {
     event.preventDefault();
 
-    const success = login(email, password);
-
-    if (success) {
+    // Static check for email and password
+    if (email === "default@example.com" && password === "password") {
       alert("Logged in successfully!");
       // Navigate to profile page or handle redirection
+      // For example, you can use window.location.href to navigate
+      window.location.href = "/profile";
     } else {
       setError("Invalid email or password");
     }

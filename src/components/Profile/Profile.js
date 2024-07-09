@@ -1,17 +1,20 @@
 import React, { useState, useRef, useEffect } from "react";
 import { FaPen } from "react-icons/fa";
-import { useAuth } from "../../Context/AuthContext";
+// import { useAuth } from "../../Context/AuthContext";
 import OrderCard from "../OrderCard/OrderCard";
-import { Redirect } from "react-router-dom"; // Import Redirect from react-router-dom
+// import { Redirect } from "react-router-dom"; // Import Redirect from react-router-dom
 
 import "./Profile.css";
+const defaultUser = {
+  name: "Default User",
+  email: "default@example.com",
+};
 
-const Profile = () => {
-  const { user } = useAuth(); // Access user state from AuthContext
+const Profile = ({ user = defaultUser }) => {
   const [isEditing, setIsEditing] = useState(false);
   const [formValues, setFormValues] = useState({
-    name: user ? user.name : "",
-    email: user ? user.email : "",
+    name: user.name,
+    email: user.email,
   });
 
   const orders = [
@@ -124,7 +127,8 @@ const Profile = () => {
 
   if (!user) {
     // Redirect to login or handle unauthorized access
-    return <Redirect to="/login" />;
+    // navigate("/"); // Navigate to the home page or login page
+    return null; // Optional: Return null or a loading indicator while redirecting
   }
 
   return (

@@ -57,6 +57,10 @@
   text-decoration: underline;
 }
 
+.active-link {
+  text-decoration: underline;
+}
+
 .donation-btn:hover {
   background-color: var(--primary-text-color);
   /* Black background on hover */
@@ -75,4 +79,33 @@
   /* Black icon */
   font-size: 1.5em;
   text-decoration: none;
+}
+
+.active-icon {
+  color: var(--secondary-color1);
+}
+
+/* Existing styles for Navbar remain unchanged */
+
+.cart-icon {
+  color: var(--primary-text-color);
+  /* Black icon */
+  font-size: 1.5em;
+  text-decoration: none;
+  margin-left: 1em;
+  /* Adjust margin as needed */
+}
+
+.cart-icon:hover {
+  color: var(--secondary-color1);
+  /* Change color on hover */
+}
+
+/* Divider line */
+
+.navbar-divider {
+  width: 100%;
+  height: 1px;
+  background-color: var(--secondary-color2);
+  margin-top: 0.5em;
 }
