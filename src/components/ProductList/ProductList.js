@@ -24,8 +24,9 @@ const ProductList = () => {
 
   return (
     <div>
-      <Search />
       <div className="product-list">
+        {" "}
+        <Search className="search" />
         <h1> Products </h1>{" "}
         <div className="product-grid">
           {" "}

@@ -87,12 +87,12 @@
 
 /* Existing styles for Navbar remain unchanged */
 
-.cart-icon {
+.login-icon {
   color: var(--primary-text-color);
   /* Black icon */
   font-size: 1.5em;
   text-decoration: none;
-  margin-left: 1em;
+  /* margin-left: 0em; */
   /* Adjust margin as needed */
 }
 

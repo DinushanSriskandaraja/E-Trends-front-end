@@ -3,7 +3,7 @@
 /* Footer.css */
 
 .footer {
-  /* position: sticky; */
+  position: static;
   bottom: 0;
   width: 100%;
   text-align: center;

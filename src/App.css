@@ -74,3 +74,55 @@ body {
     margin: 0.5em 0;
   }
 }
+
+/* Apply custom scrollbar styles to the entire document */
+
+* {
+  scrollbar-width: thin;
+  /* "auto" or "thin" for Firefox */
+  scrollbar-color: #262626 #f5f5f5;
+  /* thumb and track colors */
+}
+
+/* Define scrollbar track */
+
+::-webkit-scrollbar {
+  width: 8px;
+  /* width of the scrollbar */
+}
+
+/* Define scrollbar thumb */
+
+::-webkit-scrollbar-thumb {
+  background-color: #262626;
+  /* color of the thumb */
+  border-radius: 4px;
+  /* roundness of the thumb */
+}
+
+/* Define scrollbar track (Firefox) */
+
+::-moz-scrollbar {
+  width: 8px;
+}
+
+/* Define scrollbar thumb (Firefox) */
+
+::-moz-scrollbar-thumb {
+  background-color: #262626;
+  border-radius: 4px;
+}
+
+/* Optional: Define scrollbar track background color */
+
+::-webkit-scrollbar-track {
+  background-color: #f5f5f5;
+  /* color of the track */
+}
+
+/* Optional: Define scrollbar corner (Firefox) */
+
+::-webkit-scrollbar-corner {
+  background-color: #f5f5f5;
+  /* color of the corner */
+}

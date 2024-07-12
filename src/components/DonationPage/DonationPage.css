@@ -13,6 +13,7 @@
   color: var(--primary-text-color);
   text-align: center;
   padding: 20px;
+  min-height: 110vh;
   font-family: Arial, sans-serif;
 }
 

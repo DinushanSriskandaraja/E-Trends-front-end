@@ -11,6 +11,10 @@ product-list {
   /* Using root color variable */
 }
 
+.product-list .search {
+  margin-top: 20px;
+}
+
 .product-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));

@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaUser, FaShoppingCart } from "react-icons/fa"; // Import FaUser and FaShoppingCart icons from react-icons/fa
+import { FaUser, FaShoppingCart, FaSignInAlt } from "react-icons/fa"; // Import FaUser, FaShoppingCart, and FaSignInAlt icons from react-icons/fa
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -29,10 +29,13 @@ const Navbar = () => {
             Categories{" "}
           </Link>{" "}
         </div>{" "}
-        {/* User icon and cart icon on the right */}{" "}
+        {/* User icon and login icon on the right */}{" "}
         <div className="navbar-right">
           <Link to="/profile" className="user-icon">
             <FaUser />
+          </Link>{" "}
+          <Link to="/login" className="login-icon">
+            <FaSignInAlt />
           </Link>{" "}
         </div>{" "}
       </nav>{" "}

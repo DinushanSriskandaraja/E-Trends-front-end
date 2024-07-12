@@ -21,7 +21,7 @@ const Login = () => {
   };
 
   return (
-    <div className="page">
+    <div className="login-page">
       <h1> Login </h1>{" "}
       <form onSubmit={handleSubmit}>
         <input
@@ -41,6 +41,12 @@ const Login = () => {
         {error && <p className="error-message"> {error} </p>}{" "}
         <button type="submit"> Login </button>{" "}
       </form>{" "}
+      <p style={{ marginTop: "10px" }}>
+        Don 't have an account?{" "}
+        <a href="/signup" style={{ color: "blue" }}>
+          Register Now{" "}
+        </a>{" "}
+      </p>{" "}
     </div>
   );
 };
