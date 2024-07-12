@@ -1,14 +1,121 @@
-/* src/components/DonationPage/DonationPage.css */
+:root {
+  --primary-background-color: #f5f5f5;
+  --primary-text-color: #333333;
+  --secondary-color1: #262626;
+  --secondary-color2: #595959;
+  --button-background: #262626;
+  --button-background-hover: #595959;
+  --button-selected-background: #f5f5f5;
+}
 
 .page {
-  padding: 2em;
+  background-color: var(--primary-background-color);
+  color: var(--primary-text-color);
+  text-align: center;
+  padding: 20px;
+  font-family: Arial, sans-serif;
 }
 
-input {
-  margin-right: 1em;
-  padding: 0.5em;
+.amount-input {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
 }
 
-button {
-  padding: 0.5em;
+.amount-input input {
+  margin-top: 20px;
+}
+
+.amount-input select,
+.amount-input input {
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  margin-right: 10px;
+  font-size: 18px;
+  width: 150px;
+  text-align: right;
+}
+
+.donation-suggestions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0;
+}
+
+.donation-suggestions button {
+  margin: 5px;
+  padding: 10px 20px;
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.donation-suggestions button.selected {
+  background-color: var(--button-selected-background);
+  color: var(--primary-text-color);
+  border: 2px solid var(--button-background);
+}
+
+.donation-suggestions button:hover {
+  background-color: var(--button-background-hover);
+}
+
+select {
+  padding: 10px;
+  margin: 20px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  width: 220px;
+  font-size: 18px;
+}
+
+.donate-button {
+  padding: 15px 30px;
+  background-color: var(--button-background);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.donate-button:hover {
+  background-color: var(--button-background-hover);
+}
+
+.donation-summary {
+  background-color: white;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  padding: 20px;
+  margin-top: 20px;
+  text-align: left;
+  display: inline-block;
+}
+
+.donation-summary h2 {
+  margin-top: 0;
+}
+
+.donation-summary .info-text {
+  color: #888;
+  font-size: 12px;
+}
+
+.donation-summary hr {
+  border: none;
+  border-top: 1px solid #ddd;
+  margin: 10px 0;
+}
+
+.donation-total {
+  font-weight: bold;
+  font-size: 18px;
 }
