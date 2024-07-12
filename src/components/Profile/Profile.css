@@ -1,5 +1,6 @@
 .profile-page {
   padding: 20px;
+  min-height: 90vh;
 }
 
 .profile-container {
@@ -159,6 +160,8 @@
 
 .order-product-name {
   font-size: 18px;
+  white-space: nowrap;
+  overflow: hidden;
   margin-bottom: 8px;
   color: var(--primary-text-color);
 }

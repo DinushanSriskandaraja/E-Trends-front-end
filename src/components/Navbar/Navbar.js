@@ -34,9 +34,6 @@ const Navbar = () => {
           <Link to="/profile" className="user-icon">
             <FaUser />
           </Link>{" "}
-          <Link to="/cart" className="cart-icon">
-            <FaShoppingCart />
-          </Link>{" "}
         </div>{" "}
       </nav>{" "}
       {/* Divider line */} <div className="navbar-divider"> </div>{" "}

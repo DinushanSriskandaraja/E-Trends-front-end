@@ -1,11 +1,75 @@
-/* src/components/ProductList/ProductList.css */
+product-list {
+  padding: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
 
-.product-list {
-  padding: 2em;
+.product-list h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: var(--primary-text-color);
+  /* Using root color variable */
 }
 
 .product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  padding: 20px;
+}
+
+.product-grid .product-card {
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.product-grid .product-card:hover {
+  transform: translateY(-5px);
+}
+
+.product-card img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.product-card .product-details {
+  padding: 10px;
+}
+
+.product-card .product-details h2 {
+  font-size: 18px;
+  margin: 0 0 10px 0;
+  color: #555;
+}
+
+.product-card .product-details p {
+  font-size: 14px;
+  color: #777;
+  margin: 0 0 10px 0;
+}
+
+.product-card .product-details .price {
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+@media (max-width: 768px) {
+  .product-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.search-container {
   display: flex;
-  flex-wrap: wrap;
-  gap: 1em;
+  justify-content: center;
+  margin-bottom: 20px;
+  border: 1px solid var(--secondary-color1);
+  /* Using root color variable */
+  height: 60px;
+  /* Fixed height example */
 }

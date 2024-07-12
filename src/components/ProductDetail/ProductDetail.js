@@ -1,50 +1,13 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
 import "./ProductDetail.css";
-import { FaStar, FaStarHalfAlt, FaCartPlus } from "react-icons/fa"; // Import necessary icons
-
-const products = [
-  {
-    id: 1,
-    name: "Product A",
-    category: 1,
-    description: "Description of Product A",
-    imageUrl: "https://via.placeholder.com/150",
-    rating: 4.5,
-    price: 29.99,
-  },
-  {
-    id: 2,
-    name: "Product B",
-    category: 1,
-    description: "Description of Product B",
-    imageUrl: "https://via.placeholder.com/150",
-    rating: 3,
-    price: 19.99,
-  },
-  {
-    id: 3,
-    name: "Product C",
-    category: 2,
-    description: "Description of Product C",
-    imageUrl: "https://via.placeholder.com/150",
-    rating: 5,
-    price: 39.99,
-  },
-  {
-    id: 4,
-    name: "Product D",
-    category: 3,
-    description: "Description of Product D",
-    imageUrl: "https://via.placeholder.com/150",
-    rating: 2.5,
-    price: 14.99,
-  },
-];
+import { FaStar, FaStarHalfAlt, FaCheck } from "react-icons/fa"; // Import necessary icons
+import products from "../Product";
 
 const ProductDetail = () => {
   const { id } = useParams();
   const [quantity, setQuantity] = useState(1); // State for quantity
+  const [showPopup, setShowPopup] = useState(false); // State for popup visibility
 
   const product = products.find((product) => product.id === parseInt(id, 10));
 
@@ -52,9 +15,19 @@ const ProductDetail = () => {
     return <div> Product not found </div>;
   }
 
-  const handleAddToCart = () => {
-    // Implement your add to cart logic here
-    console.log(`Added ${quantity} ${product.name}(s) to cart`);
+  const handlePlaceOrder = () => {
+    // Show confirmation popup
+    setShowPopup(true);
+  };
+
+  const handleConfirmOrder = () => {
+    // Implement your place order logic here
+    console.log(`Placed order for ${quantity} ${product.name}(s)`);
+    setShowPopup(false); // Close the popup
+  };
+
+  const handleClosePopup = () => {
+    setShowPopup(false); // Close the popup
   };
 
   const renderStars = (rating) => {
@@ -97,12 +70,22 @@ const ProductDetail = () => {
               onChange={(e) => setQuantity(parseInt(e.target.value))}
             />{" "}
           </div>{" "}
-          <button onClick={handleAddToCart} className="add-to-cart-button">
-            <FaCartPlus className="cart-icon" />
-            Add to Cart{" "}
+          <button onClick={handlePlaceOrder} className="place-order-button">
+            <FaCheck className="cart-icon" />
+            Place Order{" "}
           </button>{" "}
         </div>{" "}
       </div>{" "}
+      {showPopup && (
+        <div className="popup">
+          <div className="popup-content">
+            <h2> Confirm Order </h2>{" "}
+            <p> Are you sure you want to place the order ? </p>{" "}
+            <button onClick={handleConfirmOrder}> Yes </button>{" "}
+            <button onClick={handleClosePopup}> No </button>{" "}
+          </div>{" "}
+        </div>
+      )}{" "}
     </div>
   );
 };
